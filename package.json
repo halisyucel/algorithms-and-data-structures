@@ -1,0 +1,16 @@
+{
+  "name": "algorithms-and-data-structures",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "repository": "https://github.com/halisycel/algorithms-and-data-structures.git",
+  "author": "halisycel <isaycel2001@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
