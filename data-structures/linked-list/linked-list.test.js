@@ -37,9 +37,9 @@ test('LinkedList => insertAt() method test', () => {
     linkedList.add(2);
     linkedList.add(3);
     linkedList.add(4);
-    linkedList.insertAt(10, 2)
+    linkedList.insertAt(10, 2);
     expect(linkedList.getList()).toBe('1 2 10 3 4');
-    linkedList.insertAt(111, 0)
+    linkedList.insertAt(111, 0);
     expect(linkedList.getList()).toBe('111 1 2 10 3 4');
 });
 
@@ -49,9 +49,9 @@ test('LinkedList => removeFrom() method test', () => {
     linkedList.add(2);
     linkedList.add(3);
     linkedList.add(4);
-    linkedList.removeFrom(2)
+    linkedList.removeFrom(2);
     expect(linkedList.getList()).toBe('1 2 4');
-    linkedList.removeFrom(0)
+    linkedList.removeFrom(0);
     expect(linkedList.getList()).toBe('2 4');
 });
 
@@ -61,9 +61,9 @@ test('LinkedList => removeValue() method test', () => {
     linkedList.add(2);
     linkedList.add(3);
     linkedList.add(4);
-    linkedList.removeValue(2)
+    linkedList.removeValue(2);
     expect(linkedList.getList()).toBe('1 3 4');
-    linkedList.removeValue(1)
+    linkedList.removeValue(1);
     expect(linkedList.getList()).toBe('3 4');
 });
 

@@ -3,6 +3,10 @@ class ListNode {
         this.value = value;
         this.next = null;
     }
+
+    getValue() {
+        return this.value;
+    }
 }
 
 module.exports = class LinkedList {
@@ -38,6 +42,10 @@ module.exports = class LinkedList {
             current = current.next;
         }
         return list.trim();
+    }
+
+    getHead() {
+        return this.head;
     }
 
     add(value) {
@@ -100,6 +108,7 @@ module.exports = class LinkedList {
             prev = current;
             current = current.next;
         }
+        throw new Error('Value not found');
     }
 
     indexOf(value) {
