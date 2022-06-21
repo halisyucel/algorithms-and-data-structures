@@ -1,15 +1,15 @@
 const selectionSort = (array) => {
-	for (let cursor = 0; cursor < array.length; cursor++) {
-		let tmp = 0;
-		let min = array[0];
-		for (let index = 0; index < (array.length - cursor) ; index++) {
-			if (min > array[index]) {
-				min = array[index];
-				tmp = index;
-			}
+	let tmp;
+	let minIndex;
+	for (let cursor = 0; cursor < (array.length - 1); cursor++) {
+		minIndex = cursor;
+		for (let index = cursor+1; index < array.length ; index++) {
+			if (array[index] < array[minIndex])
+				minIndex = index;
 		}
-		array.splice(tmp, 1);
-		array.push(min);
+		tmp = array[minIndex];
+		array[minIndex] = array[cursor];
+		array[cursor] = tmp;
 	}
 }
 
