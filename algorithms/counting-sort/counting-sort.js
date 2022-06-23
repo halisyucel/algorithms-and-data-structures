@@ -1,5 +1,5 @@
 const countingSort = (array) => {
-	let output = [];
+	let output = new Array(array.length);
 	let count = [];
 	let max = array[0];
 	
@@ -13,14 +13,15 @@ const countingSort = (array) => {
 		count[array[i]] += 1;
 	
 	for (let i = 0; i < (count.length - 1); i++)
-		count[i+1] = count[i] + count[i+1];
+		count[i+1] += count[i];
 	
 	for (let i = 0; i < array.length; i++) {
 		output[count[array[i]] - 1] = array[i];
 		count[array[i]] -= 1;
 	}
 	
-	return output;
+	for (let i = 0; i < array.length; i++)
+		array[i] = output[i];
 }
 
 module.exports = countingSort;
